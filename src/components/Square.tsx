@@ -1,10 +1,18 @@
 import React from "react";
 import "./Square.css"
 
-export const Square: React.FC = () => {
+interface Props {
+    index: number;
+}
+
+function alertText(index: number): void {
+    alert('You click at ' + index);
+}
+
+export const Square: React.FC<Props> = ({index}) => {
     return (
-        <button className="square">
-          {/* TODO */}
+        <button className="square" onClick={() => alertText(index)}>
+            {index}
         </button>
     );
 }

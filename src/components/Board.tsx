@@ -3,8 +3,8 @@ import "./Board.css"
 import {Square} from "./Square";
 
 
-function renderSquare(i: number) {
-  return <Square />;
+function renderSquare(index: number) {
+  return <Square index={index}/>;
 }
 
 export const Board: React.FC = () => {
